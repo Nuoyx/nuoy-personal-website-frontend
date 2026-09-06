@@ -1,5 +1,6 @@
 import "./HomePage.css";
 
+import Header from "../../components/header/Header"
 import Sidebar from "./sidebar/SideBar";
 import About from "./about/About";
 import Skills from "./skills/Skills";
@@ -10,8 +11,8 @@ import Contact from "./contact/Contact";
 function HomePage() {
   return (
     <div className="home-page">
+      <Header />
       <Sidebar />
-
       <main className="home">
         {/* Hero */}
         <section id="home" className="home__hero">
@@ -19,7 +20,6 @@ function HomePage() {
             <p className="home__eyebrow">
               Software Engineer
             </p>
-
             <h1>
               Hi, I'm Michael.
             </h1>

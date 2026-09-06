@@ -1,43 +1,30 @@
 .sidebar {
   position: fixed;
-  top: 0;
+  top: 72px;
   left: 0;
-
   width: 240px;
-  height: 100vh;
-
+  height: calc(100vh - 72px);
   display: flex;
   flex-direction: column;
-
-  z-index: 1000;
+  z-index: 100;
 }
 
 .sidebar__content {
   height: 100%;
-
   display: flex;
   flex-direction: column;
-
-  padding: 3rem 2rem;
+  padding: 32px 32px 56px 32px;
 }
 
-/* =========================
-   Logo
-   ========================= */
-
+/* =========================    Logo    ========================= */
 .sidebar__logo {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 }
 
-
-/* =========================
-   Navigation
-   ========================= */
-
+/* =========================    Navigation    ========================= */
 .sidebar__nav {
   display: flex;
   flex-direction: column;
@@ -46,24 +33,15 @@
 
 .sidebar__link {
   position: relative;
-
   width: fit-content;
-
   padding: 0;
-
   border: none;
   background: none;
-
   font: inherit;
   text-align: left;
-
   cursor: pointer;
-
   opacity: 0.5;
-
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .sidebar__link:hover {
@@ -71,26 +49,18 @@
   transform: translateX(4px);
 }
 
-
-/* =========================
-   Social
-   ========================= */
-
+/* =========================    Social    ========================= */
 .sidebar__social {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-
   margin-top: auto;
 }
 
 .sidebar__social a {
   width: fit-content;
-
   text-decoration: none;
-
   opacity: 0.5;
-
   transition: opacity 0.2s ease;
 }
 

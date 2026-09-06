@@ -9,13 +9,16 @@ export default defineConfig({
     babel({ presets: [reactCompilerPreset()] })
   ],
   server: {
+    watch: {
+      usePolling: true
+    },
     proxy: {
       '/api': {
         target: 'http://localhost:3000'
       },
       '/images': {
         target: 'http://localhost:3000'
-      } 
+      }
     },
   },
 })
