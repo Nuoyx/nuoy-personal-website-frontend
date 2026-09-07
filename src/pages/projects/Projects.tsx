@@ -1,8 +1,10 @@
 import "./projects.css";
 
 import Header from "../../components/header/Header"
+import { Link } from "react-router-dom";
 
 interface Project {
+  slug: string;
   title: string;
   description: string;
   technologies: string[];
@@ -13,6 +15,7 @@ interface Project {
 
 const projects: Project[] = [
   {
+    slug: "nuoy-task-management",
     title: "Nuoy Task Management",
     description:
       "A full-stack task management application with user authentication, task management, and RESTful APIs.",
@@ -21,10 +24,18 @@ const projects: Project[] = [
     demo: "#",
   },
   {
+    slug: "nuoy-take-out",
     title: "Nuoy Take-Out",
     description:
       "A backend management system for a take-out application, including employee management, dishes, orders, and scheduled order processing.",
-    technologies: ["Java", "Spring Boot", "MyBatis", "MySQL", "Redis", "AWS S3"],
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "MyBatis",
+      "MySQL",
+      "Redis",
+      "AWS S3",
+    ],
     github: "#",
   },
 ];
@@ -41,22 +52,58 @@ function Projects() {
             software engineering and full-stack development.
           </p>
         </header>
-
         <div className="projects-grid">
           {projects.map((project) => (
-            <article className="project-card" key={project.title}>
-              <h2>{project.title}</h2>
+            <article
+              className="project-card"
+              key={project.slug}
+            >
+              {/* Project Title */}
+
+              <Link
+                to={`/projects/${project.slug}`}
+                className="project-title-link"
+              >
+                <h2>{project.title}</h2>
+              </Link>
+
+
+              {/* Project Card Body */}
 
               <div className="project-card-body">
-                <div className="project-image">
-                  {project.image ? (
-                    <img src={project.image} alt={project.title} />
-                  ) : (
-                    <div className="project-image-placeholder">
-                      <span>{project.title}</span>
+
+                {/* Project Image */}
+
+                <Link
+                  to={`/projects/${project.slug}`}
+                  className="project-image-link"
+                >
+                  <div className="project-image">
+
+                    {project.image ? (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                      />
+                    ) : (
+                      <div className="project-image-placeholder">
+                        <span>{project.title}</span>
+                      </div>
+                    )}
+
+                    {/* Hover Overlay */}
+
+                    <div className="project-image-overlay">
+                      <span className="project-detail-button">
+                        Project Detail
+                      </span>
                     </div>
-                  )}
-                </div>
+
+                  </div>
+                </Link>
+
+
+                {/* Project Content */}
 
                 <div className="project-content">
 
@@ -64,32 +111,52 @@ function Projects() {
                     {project.description}
                   </p>
 
+
+                  {/* Technologies */}
+
                   <div className="project-technologies">
                     {project.technologies.map((technology) => (
-                      <span key={technology}>{technology}</span>
+                      <span key={technology}>
+                        {technology}
+                      </span>
                     ))}
                   </div>
 
+
+                  {/* External Links */}
+
                   <div className="project-links">
+
                     {project.github && (
-                      <a href={project.github} target="_blank" rel="noreferrer">
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         GitHub
                       </a>
                     )}
 
                     {project.demo && (
-                      <a href={project.demo} target="_blank" rel="noreferrer">
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         Live Demo
                       </a>
                     )}
+
                   </div>
+
                 </div>
+
               </div>
             </article>
           ))}
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
