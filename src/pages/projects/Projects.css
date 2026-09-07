@@ -1,0 +1,149 @@
+.projects-page {
+  min-height: 100vh;
+  padding: 80px 60px;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-header {
+  max-width: 700px;
+  margin-bottom: 60px;
+}
+
+.projects-label {
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+}
+
+.projects-header h1 {
+  margin: 0 0 20px;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.projects-intro {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.7;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.project-card {
+  overflow: hidden;
+  padding: 25px;
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  border-radius: 12px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.project-card > h2 {
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+}
+
+.project-card-body {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1fr);
+  gap: 25px;
+  align-items: start;
+}
+
+.project-image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #f1f1f1;
+}
+
+.project-image-placeholder span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.project-content {
+  min-width: 0;
+}
+
+.project-description {
+  margin: 0 0 20px;
+  line-height: 1.6;
+  opacity: 0.75;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.project-technologies span {
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: rgba(128, 128, 128, 0.12);
+  font-size: 0.8rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 20px;
+}
+
+.project-links a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .projects-page {
+    padding: 60px 25px;
+  }
+
+  .projects-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-body {
+    grid-template-columns: 1fr;
+  }
+}

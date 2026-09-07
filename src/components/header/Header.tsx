@@ -11,8 +11,12 @@ const navigationItems = [
     path: "/projects",
   },
   {
-    label: "Resume",
-    path: "/resume",
+    label: "Artworks",
+    path: "/artworks",
+  },
+  {
+    label: "Blog",
+    path: "/blog",
   },
 ];
 
@@ -38,8 +42,8 @@ function Header() {
             </Link>
           ))}
         </nav>
-
-        {/* Right Side */}
+{/* 
+        {/* Right Side }
         <div className="header__actions">
           <Link
             to="/secret"
@@ -47,7 +51,7 @@ function Header() {
           >
             More
           </Link>
-        </div>
+        </div> */}
 
       </div>
     </header>
