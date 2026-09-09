@@ -32,7 +32,7 @@ function Projects() {
         </div>
 
         <div className="projects__list">
-          {projects.map((project) => (
+          {projects.slice(0,2).map((project) => (
             <article
               className="project-card"
               key={project.title}
