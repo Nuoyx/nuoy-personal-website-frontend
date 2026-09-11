@@ -12,19 +12,9 @@ function About() {
 
         <div className="about__content">
           <p>
-            I'm a software engineer interested in building
-            reliable and scalable software systems.
-          </p>
-
-          <p>
-            My experience spans backend development, frontend
-            development, databases, cloud services, and
-            artificial intelligence.
-          </p>
-
-          <p>
-            I enjoy learning new technologies and turning
-            complex problems into simple, maintainable solutions.
+            I’m currently pursuing my path in computer science with a strong focus on machine learning, data science, and algorithms. 
+            I’m also the founder of an early-stage startup developing an online platform that helps people quickly discover the food they want.
+            Beyond coding, I love discovering new restaurants in the DMV area, learning digital drawing, and baking cookies and cakes for my family!
           </p>
         </div>
 

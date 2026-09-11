@@ -30,7 +30,7 @@ function HomePage() {
             </p>
 
             <div className="home__hero-actions">
-              <a href="#projects" className="home__button">
+              <a href="/projects" className="home__button">
                 View My Work
               </a>
 
