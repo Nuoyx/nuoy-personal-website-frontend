@@ -27,7 +27,6 @@ function Projects() {
       <div className="projects__container">
 
         <div className="projects__heading">
-          <span>03</span>
           <h2>Projects</h2>
         </div>
 

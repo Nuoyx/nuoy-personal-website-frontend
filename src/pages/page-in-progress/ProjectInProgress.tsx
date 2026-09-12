@@ -26,10 +26,6 @@ function ProjectInProgress() {
         </p>
 
         <div className="project-progress__actions">
-          <Link to="/projects">
-            ← Back to Projects
-          </Link>
-
           <Link to="/">
             Back to Home
           </Link>

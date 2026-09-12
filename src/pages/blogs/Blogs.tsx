@@ -1,15 +1,15 @@
-import "./Artworks.css";
+import "./Blogs.css";
 import ProjectInProgress from '../page-in-progress/ProjectInProgress'
 import Header from "../../components/header/Header";
 
 
-function Artworks() {
+function Blogs() {
   return (
-    <div className="artworks-page">
+    <div className="blogs-page">
       <Header />
       <ProjectInProgress />
     </div>
   );
 }
 
-export default Artworks;
+export default Blogs;

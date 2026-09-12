@@ -1,58 +1,51 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
 const navigationItems = [
-  {
-    label: "Home",
-    path: "/",
-  },
-  {
-    label: "Projects",
-    path: "/projects",
-  },
-  {
-    label: "Artworks",
-    path: "/artworks",
-  },
-  {
-    label: "Blog",
-    path: "/blog",
-  },
+  { label: "Home", path: "/" },
+  { label: "Projects", path: "/projects" },
+  { label: "Artworks", path: "/artworks" },
+  { label: "Blogs", path: "/blogs" },
 ];
 
 function Header() {
+  const [isDark, setIsDark] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme ? savedTheme === "dark" : false;
+  });
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = isDark ? "dark" : "light";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  }, [isDark]);
+
   return (
     <header className="header">
       <div className="header__container">
-
-        {/* Logo */}
         <Link to="/" className="header__logo">
-          MZ
+          MZ<span>.</span>
         </Link>
 
-        {/* Navigation */}
         <nav className="header__nav">
           {navigationItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className="header__link"
-            >
+            <Link key={item.path} to={item.path} className="header__link">
               {item.label}
             </Link>
           ))}
         </nav>
-{/* 
-        {/* Right Side }
-        <div className="header__actions">
-          <Link
-            to="/secret"
-            className="header__secret"
-          >
-            More
-          </Link>
-        </div> */}
 
+        <div className="header__actions">
+          <button
+            type="button"
+            className="theme-toggle"
+            aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+            aria-pressed={isDark}
+            onClick={() => setIsDark((current) => !current)}
+          >
+            <span aria-hidden="true">{isDark ? "☼" : "☾"}</span>
+          </button>
+        </div>
       </div>
     </header>
   );

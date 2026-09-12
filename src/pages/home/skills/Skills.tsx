@@ -25,7 +25,6 @@ function Skills() {
       <div className="skills__container">
 
         <div className="skills__heading">
-          <span>02</span>
           <h2>Skills</h2>
         </div>
 

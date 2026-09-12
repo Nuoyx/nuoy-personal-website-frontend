@@ -1,69 +1,54 @@
 .project-progress {
+  display: grid;
   min-height: 100vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 4rem 2rem;
+  padding: 140px 22px 80px;
+  place-items: center;
+  text-align: center;
+  background: radial-gradient(circle at 50% 30%, var(--accent-soft), transparent 40%);
 }
 
 .project-progress__content {
-  max-width: 700px;
-
-  text-align: center;
+  max-width: 640px;
 }
 
-.project-progress__label {
-  display: inline-block;
-
-  margin-bottom: 1.5rem;
-
-  font-size: 0.8rem;
-  font-weight: 600;
-
-  letter-spacing: 0.15em;
+.project-progress__label,
+.projects-label,
+.project-detail-category {
+  color: var(--accent);
+  font: 700 12px var(--mono);
+  letter-spacing: 2px;
   text-transform: uppercase;
-
-  opacity: 0.5;
 }
 
 .project-progress h1 {
-  margin: 0;
-
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  line-height: 1.1;
+  margin-bottom: 18px;
+  font-size: clamp(48px, 8vw, 88px);
+  font-weight: 400;
 }
 
 .project-progress p {
-  max-width: 600px;
-
-  margin: 1.5rem auto 0;
-
-  line-height: 1.7;
-  opacity: 0.7;
+  margin: 0 auto;
+  line-height: 1.75;
 }
 
 .project-progress__actions {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-
-  margin-top: 3rem;
+  gap: 12px;
+  margin-top: 30px;
 }
 
 .project-progress__actions a {
+  padding: 11px 18px;
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  color: var(--accent);
+  font-weight: 700;
   text-decoration: none;
-
-  padding: 0.75rem 1.25rem;
-
-  border: 1px solid currentColor;
-  border-radius: 4px;
 }
 
 @media (max-width: 600px) {
   .project-progress__actions {
     flex-direction: column;
-    align-items: center;
   }
 }

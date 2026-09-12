@@ -6,7 +6,6 @@ function Contact() {
       <div className="contact__container">
 
         <div className="contact__heading">
-          <span>05</span>
           <h2>Contact</h2>
         </div>
 

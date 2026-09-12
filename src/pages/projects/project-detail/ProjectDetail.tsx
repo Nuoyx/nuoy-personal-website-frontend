@@ -2,6 +2,7 @@ import "./ProjectDetail.css";
 
 import { Link, useParams } from "react-router-dom";
 import { getProjectBySlug } from "../../../util/getProjectBySlug";
+import Header from "../../../components/header/Header";
 
 
 function ProjectDetail() {
@@ -14,6 +15,7 @@ function ProjectDetail() {
   if (!project) {
     return (
       <div className="project-detail">
+        <Header />
         <h1>Project Not Found</h1>
 
         <Link to="/projects">
@@ -24,6 +26,7 @@ function ProjectDetail() {
   }
   return (
     <div className="project-detail">
+      <Header />
 
       {/* =========================
           Project Header

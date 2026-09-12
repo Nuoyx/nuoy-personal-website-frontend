@@ -30,7 +30,6 @@ function Experience() {
       <div className="experience__container">
 
         <div className="experience__heading">
-          <span>04</span>
           <h2>Experience</h2>
         </div>
 

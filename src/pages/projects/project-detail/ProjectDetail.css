@@ -1,34 +1,24 @@
-/* =========================
-   Page
-   ========================= */
-
 .project-detail {
   min-height: 100vh;
-  padding: 80px 60px;
+  padding: 140px 22px 90px;
 }
 
-.project-detail > * {
-  max-width: 1000px;
-  margin-left: auto;
+.project-detail>* {
+  max-width: 940px;
   margin-right: auto;
+  margin-left: auto;
 }
-
-
-/* =========================
-   Header
-   ========================= */
 
 .project-detail-header {
-  margin-bottom: 60px;
+  margin-bottom: 58px;
 }
 
 .project-detail-back {
   display: inline-block;
-  margin-bottom: 35px;
-
-  font-size: 0.9rem;
-  font-weight: 600;
-
+  margin-bottom: 34px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -37,367 +27,120 @@
 }
 
 .project-detail-category {
-  margin: 0 0 12px;
-
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-
-  opacity: 0.6;
+  margin-bottom: 14px;
 }
 
 .project-detail-title {
-  margin: 0 0 20px;
-
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1.15;
+  margin-bottom: 18px;
+  font-size: clamp(48px, 8vw, 84px);
+  font-weight: 400;
 }
 
 .project-detail-intro {
-  max-width: 750px;
-  margin: 0 0 30px;
-
-  font-size: 1.1rem;
-  line-height: 1.7;
-
-  opacity: 0.7;
+  max-width: 680px;
+  margin-bottom: 26px;
+  font-size: 18px;
+  line-height: 1.75;
 }
-
-
-/* =========================
-   Technologies
-   ========================= */
 
 .project-detail-technologies {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
-
-.project-detail-technologies span {
-  padding: 6px 12px;
-
-  border-radius: 20px;
-
-  background: rgba(128, 128, 128, 0.12);
-
-  font-size: 0.8rem;
-}
-
-
-/* =========================
-   Links
-   ========================= */
 
 .project-detail-links {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 18px;
 }
 
 .project-detail-links a {
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
 }
 
-.project-detail-links a:hover {
-  text-decoration: underline;
-}
-
-
-/* =========================
-   Project Image
-   ========================= */
-
 .project-detail-image {
-  width: 100%;
   margin-bottom: 70px;
 }
 
 .project-detail-image-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 450px;
-
-  border: 1px solid rgba(128, 128, 128, 0.25);
-  border-radius: 12px;
-
-  background: rgba(128, 128, 128, 0.08);
+  display: grid;
+  min-height: 390px;
+  border: 1px solid var(--border);
+  place-items: center;
+  background: var(--surface-muted);
+  color: var(--accent);
+  font: 700 18px var(--heading);
 }
-
-.project-detail-image-placeholder span {
-  font-size: 1.5rem;
-  font-weight: 600;
-
-  opacity: 0.5;
-}
-
-
-/* =========================
-   Sections
-   ========================= */
 
 .project-detail-section {
-  margin-bottom: 70px;
+  margin-bottom: 64px;
 }
 
 .project-detail-section h2 {
-  margin: 0 0 25px;
-
-  font-size: 2rem;
-  font-weight: 700;
+  margin-bottom: 24px;
+  font-size: 38px;
+  font-weight: 400;
 }
 
 .project-detail-section p {
-  margin: 0 0 18px;
-
-  max-width: 850px;
-
-  font-size: 1rem;
+  max-width: 760px;
+  margin-bottom: 16px;
   line-height: 1.8;
-
-  opacity: 0.75;
 }
 
-
-/* =========================
-   Features
-   ========================= */
-
-.project-detail-features {
+.project-detail-features,
+.project-detail-architecture,
+.project-detail-challenges,
+.project-detail-technical {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  gap: 14px;
 }
 
 .project-detail-feature {
-  padding: 25px;
-
-  border: 1px solid rgba(128, 128, 128, 0.25);
-  border-radius: 12px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  background: var(--surface);
 }
 
-.project-detail-feature h3 {
-  margin: 0 0 10px;
-
-  font-size: 1.1rem;
-}
-
-.project-detail-feature p {
-  margin: 0;
-}
-
-
-/* =========================
-   Architecture
-   ========================= */
-
-.project-detail-architecture {
-  display: grid;
-  gap: 20px;
-}
-
-.project-detail-architecture-item {
-  padding: 25px;
-
-  border-left: 3px solid rgba(128, 128, 128, 0.4);
-  background: rgba(128, 128, 128, 0.05);
-}
-
-.project-detail-architecture-item h3 {
-  margin: 0 0 10px;
-
-  font-size: 1.1rem;
-}
-
-.project-detail-architecture-item p {
-  margin: 0;
-}
-
-
-/* =========================
-   Technical Details
-   ========================= */
-
-.project-detail-technical {
-  display: grid;
-  gap: 25px;
-}
-
-.project-detail-technical article {
-  padding-bottom: 25px;
-
-  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
-}
-
-.project-detail-technical article:last-child {
-  border-bottom: none;
-}
-
+.project-detail-feature h3,
+.project-detail-architecture-item h3,
 .project-detail-technical h3 {
-  margin: 0 0 10px;
-
-  font-size: 1.15rem;
+  margin-bottom: 8px;
+  font: 700 16px var(--sans);
 }
 
+.project-detail-feature p,
+.project-detail-architecture-item p,
 .project-detail-technical p {
   margin: 0;
 }
 
-
-/* =========================
-   Challenges
-   ========================= */
-
-.project-detail-challenges {
-  display: grid;
-  gap: 25px;
+.project-detail-architecture-item {
+  padding: 20px 22px;
+  border-left: 3px solid var(--accent);
+  background: var(--surface-muted);
 }
 
-.project-detail-challenge {
-  padding: 25px;
-
-  border: 1px solid rgba(128, 128, 128, 0.25);
-  border-radius: 12px;
+.project-detail-technical article {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
 }
 
-.project-detail-challenge h3 {
-  margin: 0 0 8px;
-
-  font-size: 1rem;
+.project-detail-technical article:last-child {
+  border-bottom: 0;
 }
 
-.project-detail-challenge h3:nth-of-type(2) {
-  margin-top: 25px;
-}
-
-.project-detail-challenge p {
-  margin: 0;
-}
-
-
-/* =========================
-   Screenshots
-   ========================= */
-
-.project-detail-screenshots {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.project-detail-screenshots img {
-  display: block;
-
-  width: 100%;
-  height: auto;
-
-  border: 1px solid rgba(128, 128, 128, 0.25);
-  border-radius: 10px;
-}
-
-
-/* =========================
-   Future Improvements
-   ========================= */
-
-.project-detail-improvements {
-  margin: 0;
-  padding-left: 25px;
-
-  line-height: 1.8;
-
-  opacity: 0.75;
-}
-
-.project-detail-improvements li {
-  margin-bottom: 10px;
-}
-
-
-/* =========================
-   Footer
-   ========================= */
-
-.project-detail-footer {
-  padding-top: 30px;
-
-  border-top: 1px solid rgba(128, 128, 128, 0.25);
-}
-
-
-/* =========================
-   Project Not Found
-   ========================= */
-
-.project-detail > h1 {
-  margin-bottom: 20px;
-
-  font-size: 2.5rem;
-}
-
-
-/* =========================
-   Responsive
-   ========================= */
-
-@media (max-width: 768px) {
-
-  .project-detail {
-    padding: 60px 25px;
-  }
-
-  .project-detail-title {
-    font-size: 2.5rem;
-  }
-
-  .project-detail-intro {
-    font-size: 1rem;
-  }
-
-  .project-detail-image-placeholder {
-    height: 300px;
-  }
-
-  .project-detail-section h2 {
-    font-size: 1.7rem;
-  }
-
+@media (min-width: 700px) {
   .project-detail-features {
-    grid-template-columns: 1fr;
-  }
-
-  .project-detail-screenshots {
-    grid-template-columns: 1fr;
-  }
-
-  .project-detail-links {
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-
-@media (max-width: 480px) {
-
-  .project-detail {
-    padding: 45px 20px;
-  }
-
-  .project-detail-title {
-    font-size: 2rem;
-  }
-
+@media (max-width: 600px) {
   .project-detail-image-placeholder {
-    height: 220px;
-  }
-
-  .project-detail-section {
-    margin-bottom: 50px;
+    min-height: 260px;
   }
 }
