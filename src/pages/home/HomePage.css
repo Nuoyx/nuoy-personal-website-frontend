@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   min-height: 680px;
-  padding: 120px max(28px, calc((100% - 940px) / 2));
+  padding: 30px max(28px, calc((100% - 940px) / 2));
   border-bottom: 1px solid var(--border);
   background: radial-gradient(circle at 80% 20%, var(--accent-soft), transparent 36%);
 }
@@ -38,10 +38,9 @@
 
 .home__portrait {
   display: grid;
-  width: 280px;
-  aspect-ratio: 4 / 5;
+  width: 450px;
   border: 1px solid var(--border);
-  border-radius: 4px;
+  border-radius: 30%;
   place-items: center;
   color: var(--accent);
   background: linear-gradient(145deg, var(--surface), var(--surface-muted));
@@ -49,6 +48,13 @@
   font: 700 12px var(--mono);
   letter-spacing: 2px;
   text-transform: uppercase;
+  overflow: hidden
+}
+
+.home__portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .home__hero h3 {

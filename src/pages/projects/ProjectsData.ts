@@ -66,8 +66,6 @@ export const projects: Project[] = [
 
     github: "#",
 
-    demo: "#",
-
     overview: [
       "Nuoy Task Management is a full-stack web application that provides users with a centralized platform for creating, managing, and tracking tasks.",
 

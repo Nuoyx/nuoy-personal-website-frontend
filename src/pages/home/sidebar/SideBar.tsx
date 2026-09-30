@@ -6,10 +6,6 @@ const navigationItems = [
     target: "home",
   },
   {
-    label: "About",
-    target: "about",
-  },
-  {
     label: "Skills",
     target: "skills",
   },

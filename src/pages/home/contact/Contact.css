@@ -2,30 +2,40 @@
   padding-bottom: 140px;
 }
 
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .contact__content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
   max-width: 680px;
 }
 
-.contact__content h3 {
-  margin-bottom: 18px;
-  font-size: 38px;
-  font-weight: 400;
-}
-
-.contact__content p {
-  margin-bottom: 24px;
-  line-height: 1.75;
-}
-
-.contact__email {
-  display: inline-block;
-  padding-bottom: 4px;
-  border-bottom: 1px solid var(--accent);
-  color: var(--accent);
+.contact__heading h2 {
+  margin: 0;
+  font-size: 42px;
   font-weight: 700;
-  text-decoration: none;
 }
 
-.contact__email:hover {
-  color: var(--accent-strong);
+.contact__item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: var(--text-strong);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 2;
+  width: fit-content;
+}
+
+.contact__icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: brightness(0) saturate(0) invert(0.35) sepia(1) saturate(2.2) hue-rotate(120deg);
+  flex-shrink: 0;
 }

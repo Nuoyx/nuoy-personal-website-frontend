@@ -1,16 +1,16 @@
 import "./HomePage.css";
 
-import Header from "../../components/header/Header"
 import Sidebar from "./sidebar/SideBar";
 import Skills from "./skills/Skills";
 import Projects from "./projects/Projects";
 import Experience from "./experience/Experience";
 import Contact from "./contact/Contact";
+import portrait from "../../assets/portrait.png";
+
 
 function HomePage() {
   return (
     <div className="home-page">
-      <Header />
       <Sidebar />
       <main className="home">
         {/* Hero */}
@@ -46,7 +46,7 @@ function HomePage() {
             </div>
 
             <div className="home__portrait" aria-label="Portrait placeholder">
-              <span>Portrait</span>
+              <img src={ portrait } alt="portrait.png" />
             </div>
           </div>
         </section>

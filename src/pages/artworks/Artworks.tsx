@@ -1,12 +1,10 @@
 import "./Artworks.css";
 import ProjectInProgress from '../page-in-progress/ProjectInProgress'
-import Header from "../../components/header/Header";
 
 
 function Artworks() {
   return (
     <div className="artworks-page">
-      <Header />
       <ProjectInProgress />
     </div>
   );

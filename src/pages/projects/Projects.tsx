@@ -1,19 +1,7 @@
 import "./projects.css";
+import ProjectCard, { type ProjectCardData } from "./project-card/ProjectCard";
 
-import Header from "../../components/header/Header"
-import { Link } from "react-router-dom";
-
-interface Project {
-  slug: string;
-  title: string;
-  description: string;
-  technologies: string[];
-  image?: string;
-  github?: string;
-  demo?: string;
-}
-
-const projects: Project[] = [
+const projects: ProjectCardData[] = [
   {
     slug: "nuoy-task-management",
     title: "Nuoy Task Management",
@@ -21,7 +9,6 @@ const projects: Project[] = [
       "A full-stack task management application with user authentication, task management, and RESTful APIs.",
     technologies: ["React", "Spring Boot", "MyBatis", "MySQL", "JWT"],
     github: "#",
-    demo: "#",
   },
   {
     slug: "nuoy-take-out",
@@ -43,120 +30,20 @@ const projects: Project[] = [
 function Projects() {
   return (
     <div className="projects-page">
-      <Header />
       <div className="projects-container">
         <header className="projects-header">
           <h1>Projects</h1>
           <p className="projects-intro">
-            A collection of projects I've built while developing my skills in
-            software engineering and full-stack development.
+            A collection of projects I've built while developing my skills
           </p>
         </header>
         <div className="projects-grid">
           {projects.map((project) => (
-            <article
-              className="project-card"
-              key={project.slug}
-            >
-              {/* Project Title */}
-
-              <Link
-                to={`/projects/${project.slug}`}
-                className="project-title-link"
-              >
-                <h2>{project.title}</h2>
-              </Link>
-
-
-              {/* Project Card Body */}
-
-              <div className="project-card-body">
-
-                {/* Project Image */}
-
-                <Link
-                  to={`/projects/${project.slug}`}
-                  className="project-image-link"
-                >
-                  <div className="project-image">
-
-                    {project.image ? (
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                      />
-                    ) : (
-                      <div className="project-image-placeholder">
-                        <span>{project.title}</span>
-                      </div>
-                    )}
-
-                    {/* Hover Overlay */}
-
-                    <div className="project-image-overlay">
-                      <span className="project-detail-button">
-                        Project Detail
-                      </span>
-                    </div>
-
-                  </div>
-                </Link>
-
-
-                {/* Project Content */}
-
-                <div className="project-content">
-
-                  <p className="project-description">
-                    {project.description}
-                  </p>
-
-
-                  {/* Technologies */}
-
-                  <div className="project-technologies">
-                    {project.technologies.map((technology) => (
-                      <span key={technology}>
-                        {technology}
-                      </span>
-                    ))}
-                  </div>
-
-
-                  {/* External Links */}
-
-                  <div className="project-links">
-
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        GitHub
-                      </a>
-                    )}
-
-                    {project.demo && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Live Demo
-                      </a>
-                    )}
-
-                  </div>
-
-                </div>
-
-              </div>
-            </article>
+            <ProjectCard key={project.slug} project={project} />
           ))}
         </div>
       </div>
-    </div >
+    </div>
   );
 }
 

@@ -1,32 +1,32 @@
 import "./Contact.css";
+import contactAddress from "../../../assets/contact-address.png";
+import contactEmail from "../../../assets/contact-email.png";
+import contactPhone from "../../../assets/contact-phone.png";
 
 function Contact() {
   return (
     <div className="contact">
       <div className="contact__container">
-
         <div className="contact__heading">
           <h2>Contact</h2>
         </div>
 
         <div className="contact__content">
-          <h3>
-            Let's build something together.
-          </h3>
+          <div className="contact__item">
+            <img src={contactAddress} alt="Location icon" className="contact__icon" />
+            <span>Maryland, US</span>
+          </div>
 
-          <p>
-            I'm always open to discussing software engineering
-            opportunities, projects, and interesting ideas.
-          </p>
+          <div className="contact__item">
+            <img src={contactPhone} alt="Phone icon" className="contact__icon" />
+            <span>(301)393-7658</span>
+          </div>
 
-          <a
-            href="mailto:michaelzhuang16@gmail.com"
-            className="contact__email"
-          >
-            michaelzhuang16@gmail.com
-          </a>
+          <div className="contact__item">
+            <img src={contactEmail} alt="Email icon" className="contact__icon" />
+            <span>michaelzhuang16@gmail.com</span>
+          </div>
         </div>
-
       </div>
     </div>
   );
