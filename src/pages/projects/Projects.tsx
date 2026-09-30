@@ -1,31 +1,7 @@
 import "./projects.css";
-import ProjectCard, { type ProjectCardData } from "./project-card/ProjectCard";
+import ProjectCard from "./project-card/ProjectCard";
+import { projects } from "../../data/projects";
 
-const projects: ProjectCardData[] = [
-  {
-    slug: "nuoy-task-management",
-    title: "Nuoy Task Management",
-    description:
-      "A full-stack task management application with user authentication, task management, and RESTful APIs.",
-    technologies: ["React", "Spring Boot", "MyBatis", "MySQL", "JWT"],
-    github: "#",
-  },
-  {
-    slug: "nuoy-take-out",
-    title: "Nuoy Take-Out",
-    description:
-      "A backend management system for a take-out application, including employee management, dishes, orders, and scheduled order processing.",
-    technologies: [
-      "Java",
-      "Spring Boot",
-      "MyBatis",
-      "MySQL",
-      "Redis",
-      "AWS S3",
-    ],
-    github: "#",
-  },
-];
 
 function Projects() {
   return (

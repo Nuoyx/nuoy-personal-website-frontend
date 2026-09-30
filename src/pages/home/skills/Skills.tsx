@@ -1,23 +1,5 @@
 import "./Skills.css";
-
-const skillGroups = [
-  {
-    title: "Languages",
-    skills: ["Java", "Python", "JavaScript", "TypeScript", "SQL"],
-  },
-  {
-    title: "Backend",
-    skills: ["Spring Boot", "REST API", "MyBatis", "JWT", "Redis"],
-  },
-  {
-    title: "Frontend",
-    skills: ["React", "TypeScript", "HTML", "CSS", "React Router"],
-  },
-  {
-    title: "Cloud & Tools",
-    skills: ["AWS S3", "Git", "Docker", "Linux", "Nginx"],
-  },
-];
+import { skills } from "../../../data/skills";
 
 function Skills() {
   return (
@@ -29,7 +11,7 @@ function Skills() {
         </div>
 
         <div className="skills__grid">
-          {skillGroups.map((group) => (
+          {skills.map((group) => (
             <div className="skills__group" key={group.title}>
               <h3>{group.title}</h3>
 

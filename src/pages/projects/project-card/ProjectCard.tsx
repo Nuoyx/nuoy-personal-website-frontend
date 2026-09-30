@@ -1,18 +1,10 @@
 import "./ProjectCard.css";
 import { Link } from "react-router-dom";
+import type { Project } from "../../../data/projects";
 
-export interface ProjectCardData {
-  slug: string;
-  title: string;
-  description: string;
-  technologies: string[];
-  image?: string;
-  github?: string;
-  demo?: string;
-}
 
 interface ProjectCardProps {
-  project: ProjectCardData;
+  project: Project;
 }
 
 function ProjectCard({ project }: ProjectCardProps) {

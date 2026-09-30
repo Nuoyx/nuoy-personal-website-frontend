@@ -1,25 +1,5 @@
 import "./Projects.css";
-
-const projects = [
-  {
-    title: "Nuoy Task Management",
-    description:
-      "A task management application with authentication, task management, and RESTful APIs.",
-    technologies: ["Java", "Spring Boot", "MySQL", "React"],
-  },
-  {
-    title: "Nuoy Take Out",
-    description:
-      "A backend management system featuring authentication, order processing, cloud storage, and scheduled tasks.",
-    technologies: ["Java", "Spring Boot", "MyBatis", "AWS S3"],
-  },
-  {
-    title: "AI Project",
-    description:
-      "An AI-focused project exploring machine learning and intelligent software systems.",
-    technologies: ["Python", "AI", "Machine Learning"],
-  },
-];
+import { projects } from "../../../data/projects";
 
 function Projects() {
   return (
