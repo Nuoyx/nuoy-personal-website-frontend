@@ -31,7 +31,6 @@ function ChatWindow({ messages, onSendMessage, onClose }: ChatWindowProps) {
         ) : (
           messages.map((message) => (
             <ChatMessage
-              key={message.id}
               message={message}
             />
           ))
