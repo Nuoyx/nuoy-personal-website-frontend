@@ -33,9 +33,15 @@
   font-weight: 600;
 }
 
-.experience__details p {
+.experience__description {
+  margin: 0;
+  padding-left: 1.2rem;
   max-width: 650px;
   line-height: 1.7;
+}
+
+.experience__description li + li {
+  margin-top: 8px;
 }
 
 @media (max-width: 600px) {

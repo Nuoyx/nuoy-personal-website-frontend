@@ -5,9 +5,9 @@ import contactPhone from "../../../assets/contact-phone.png";
 
 function Contact() {
   return (
-    <div className="contact">
-      <div className="contact__container">
-        <div className="contact__heading">
+    <div className="home-section contact">
+      <div className="home-section__container">
+        <div className="home-section__heading">
           <h2>Contact</h2>
         </div>
 

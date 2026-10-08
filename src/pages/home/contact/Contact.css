@@ -2,10 +2,14 @@
   padding-bottom: 140px;
 }
 
-.contact__container {
+.contact .home-section__container {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.contact .home-section__heading h2 {
+  font-weight: 700;
 }
 
 .contact__content {
@@ -13,12 +17,6 @@
   flex-direction: column;
   gap: 18px;
   max-width: 680px;
-}
-
-.contact__heading h2 {
-  margin: 0;
-  font-size: 42px;
-  font-weight: 700;
 }
 
 .contact__item {

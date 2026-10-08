@@ -3,10 +3,10 @@ import { projects } from "../../../data/projects";
 
 function Projects() {
   return (
-    <div className="projects">
-      <div className="projects__container">
+    <div className="home-section projects">
+      <div className="home-section__container">
 
-        <div className="projects__heading">
+        <div className="home-section__heading">
           <h2>Projects</h2>
         </div>
 

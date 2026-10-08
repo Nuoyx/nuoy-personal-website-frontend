@@ -3,10 +3,10 @@ import { experiences } from "../../../data/experience";
 
 function Experience() {
   return (
-    <div className="experience">
-      <div className="experience__container">
+    <div className="home-section experience">
+      <div className="home-section__container">
 
-        <div className="experience__heading">
+        <div className="home-section__heading">
           <h2>Experience</h2>
         </div>
 
