@@ -10,32 +10,22 @@ interface ProjectCardProps {
 function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="project-card">
-      <Link
-        to={`/projects/${project.slug}`}
-        className="project-title-link"
-      >
-        <h2>{project.title}</h2>
-      </Link>
+      <h2>{project.title}</h2>
 
       <div className="project-card-body">
-        <Link
-          to={`/projects/${project.slug}`}
-          className="project-image-link"
-        >
-          <div className="project-image">
-            {project.image ? (
-              <img src={project.image} alt={project.title} />
-            ) : (
-              <div className="project-image-placeholder">
-                <span>{project.title}</span>
-              </div>
-            )}
-
-            <div className="project-image-overlay">
-              <span className="project-detail-button">Project Detail</span>
+        <div className="project-image">
+          {project.image ? (
+            <img src={project.image} alt={project.title} />
+          ) : (
+            <div className="project-image-placeholder">
+              <span>{project.title}</span>
             </div>
+          )}
+
+          <div className="project-image-overlay">
+            <span className="project-detail-button">Project Detail</span>
           </div>
-        </Link>
+        </div>
 
         <div className="project-content">
           <p className="project-description">{project.description}</p>

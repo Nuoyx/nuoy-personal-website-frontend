@@ -30,14 +30,14 @@
 
 .header__nav {
   display: flex;
-  gap: 28px;
+  gap: 32px;
   align-items: center;
   margin-left: auto;
 }
 
 .header__link {
   color: var(--text);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   text-decoration: none;
   opacity: 0.8;

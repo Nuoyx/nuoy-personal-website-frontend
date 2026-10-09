@@ -11,7 +11,7 @@ function Projects() {
         </div>
 
         <div className="projects__list">
-          {projects.slice(0,2).map((project) => (
+          {projects.slice(0, 2).map((project) => (
             <article
               className="project-card"
               key={project.title}
@@ -27,10 +27,19 @@ function Projects() {
                   </span>
                 ))}
               </div>
+              <div className="project-links">
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noreferrer">
+                    GitHub
+                  </a>
+                )}
 
-              <a href="/projects">
-                View Project →
-              </a>
+                {project.demo && (
+                  <a href={project.demo} target="_blank" rel="noreferrer">
+                    Live Demo
+                  </a>
+                )}
+              </div>
             </article>
           ))}
         </div>

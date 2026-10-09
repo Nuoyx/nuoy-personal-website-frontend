@@ -14,7 +14,7 @@ function Contact() {
         <div className="contact__content">
           <div className="contact__item">
             <img src={contactAddress} alt="Location icon" className="contact__icon" />
-            <span>Maryland, US</span>
+            <span>Clarksville, MD 21029</span>
           </div>
 
           <div className="contact__item">

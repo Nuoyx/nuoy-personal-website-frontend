@@ -8,21 +8,19 @@ function ProjectInProgress() {
     <main className="project-progress">
       <div className="project-progress__content">
         <span className="project-progress__label">
-          PROJECT IN PROGRESS
+          status: building
         </span>
 
         <h1>
-          This project is still being built.
+          404: Finished Website Not Found
         </h1>
 
         <p>
-          I'm currently working on this project and the
-          detailed documentation isn't available yet.
+          The developer is still coding...
         </p>
 
         <p>
-          Check back later for more information, screenshots,
-          technical details, and implementation notes.
+          Check back later for more information.
         </p>
 
         <div className="project-progress__actions">

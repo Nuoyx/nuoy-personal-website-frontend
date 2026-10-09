@@ -1,33 +1,35 @@
 .project-progress {
   display: grid;
   min-height: 100vh;
-  padding: 140px 22px 80px;
+  padding: 70px 22px 0px;
   place-items: center;
   text-align: center;
   background: radial-gradient(circle at 50% 30%, var(--accent-soft), transparent 40%);
 }
 
 .project-progress__content {
-  max-width: 640px;
+  max-width: 1200px;
 }
 
 .project-progress__label,
 .projects-label,
 .project-detail-category {
   color: var(--accent);
-  font: 700 12px var(--mono);
+  font: 700 24px var(--mono);
   letter-spacing: 2px;
   text-transform: uppercase;
+  padding-bottom: 20px;
 }
 
 .project-progress h1 {
-  margin-bottom: 18px;
-  font-size: clamp(48px, 8vw, 88px);
+  margin-bottom: 32px;
+  font-size: 70px;
   font-weight: 400;
 }
 
 .project-progress p {
   margin: 0 auto;
+  font-size: 20px;
   line-height: 1.75;
 }
 
@@ -35,7 +37,7 @@
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-top: 30px;
+  margin-top: 42px;
 }
 
 .project-progress__actions a {
