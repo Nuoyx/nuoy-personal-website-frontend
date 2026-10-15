@@ -10,8 +10,8 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "nuoy-take-out",
-    title: "Nuoy Take-Out",
+    slug: "nuoy-food-deliver",
+    title: "Nuoy Food Deliver",
     description:
       "A Java-based backend for a food delivery platform designed to support restaurant operations and online ordering. Built with Spring Boot, the project uses a modular architecture that separates shared utilities, data models, and server-side application logic. It integrates relational database access and includes dependencies for caching, cloud file storage, and API documentation.",
     technologies: [
